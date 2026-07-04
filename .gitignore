@@ -1,0 +1,29 @@
+# VS Code
+.vscode/
+
+# Claude
+.claude/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# ZIP Files
+*.zip
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Temporary
+*.tmp
+*.bak
