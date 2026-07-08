@@ -5,7 +5,8 @@
  */
 
 const SHEET_NAME = 'Enquiries';
-const ADMIN_EMAIL = 'info@tourtripsdubai.com';
+const ADMIN_EMAIL = 'tourtripsdubai@gmail.com';
+const FROM_EMAIL = 'info@tourtripsdubai.com';
 const SITE_NAME = 'TourTripsDubai';
 
 function doPost(e) {
@@ -71,24 +72,22 @@ function formatSummary(data) {
 
 function notifyAdmin(data) {
   const name = findValue(data, ['Full Name', 'Full Name (As Per Passport)']) || 'Website Visitor';
-  MailApp.sendEmail({
-    to: ADMIN_EMAIL,
-    subject: 'New Website Enquiry — ' + name,
-    body: 'You have a new enquiry from ' + SITE_NAME + ':\n\n' + formatSummary(data)
-  });
+  GmailApp.sendEmail(ADMIN_EMAIL, 'New Website Enquiry — ' + name,
+    'You have a new enquiry from ' + SITE_NAME + ':\n\n' + formatSummary(data),
+    { from: FROM_EMAIL, name: SITE_NAME }
+  );
 }
 
 function notifyCustomer(data) {
   const email = findValue(data, ['Email Address', 'Email']);
   if (!email) return;
   const name = findValue(data, ['Full Name', 'Full Name (As Per Passport)']);
-  MailApp.sendEmail({
-    to: email,
-    subject: 'We received your enquiry — ' + SITE_NAME,
-    body: 'Hi ' + (name || 'there') + ',\n\n' +
+  GmailApp.sendEmail(email, 'We received your enquiry — ' + SITE_NAME,
+    'Hi ' + (name || 'there') + ',\n\n' +
       'Thank you for reaching out to ' + SITE_NAME + '. We have received your enquiry ' +
       'and one of our travel experts will get back to you shortly.\n\n' +
       'Here is a summary of what you submitted:\n\n' + formatSummary(data) + '\n\n' +
-      'Warm regards,\n' + SITE_NAME + ' Team'
-  });
+      'Warm regards,\n' + SITE_NAME + ' Team',
+    { from: FROM_EMAIL, name: SITE_NAME }
+  );
 }
