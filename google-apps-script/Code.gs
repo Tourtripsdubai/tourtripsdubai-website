@@ -188,6 +188,9 @@ function buildAdminEmailHtml(data, leadId) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>New Enquiry — ${SITE_NAME}</title>
 <style>
   @media only screen and (max-width:640px){
@@ -208,13 +211,13 @@ function buildAdminEmailHtml(data, leadId) {
 
   <!-- HEADER -->
   <tr><td class="ttd-pad" style="background:${NAVY};background:linear-gradient(135deg,${NAVY},${NAVY_2});padding:40px 40px 34px 40px;text-align:center;">
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:.02em;">
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:.02em;">
       Tour<span style="color:${ORANGE};">Trips</span>Dubai
     </div>
-    <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:${ORANGE};font-weight:600;margin-top:6px;">Premium Dubai Experiences</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:${ORANGE};font-weight:600;margin-top:6px;">Premium Dubai Experiences</div>
     <div style="height:1px;background:rgba(255,255,255,.15);margin:26px 0;"></div>
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:26px;line-height:1.3;color:#ffffff;font-weight:700;">&#128640; New Booking Enquiry Received</div>
-    <div style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.7);margin-top:10px;">A new customer has submitted an enquiry from the website.</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:26px;line-height:1.3;color:#ffffff;font-weight:700;">&#128640; New Booking Enquiry Received</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.7);margin-top:10px;">A new customer has submitted an enquiry from the website.</div>
   </td></tr>
 
   <!-- BODY -->
@@ -223,19 +226,19 @@ function buildAdminEmailHtml(data, leadId) {
     <!-- Status badges -->
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 24px auto;">
       <tr>
-        <td style="padding:0 5px;"><div style="background:${ORANGE};color:#ffffff;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:20px;">&#9679; New Lead</div></td>
-        <td style="padding:0 5px;"><div style="background:#FEECE3;color:#C23B00;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:20px;">High Priority</div></td>
-        <td style="padding:0 5px;"><div style="background:#ffffff;border:1px solid ${BORDER};color:${NAVY_2};font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.03em;padding:8px 16px;border-radius:20px;">Website Contact Form · ${page}</div></td>
+        <td style="padding:0 5px;"><div style="background:${ORANGE};color:#ffffff;font-family:'Work Sans',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:20px;">&#9679; New Lead</div></td>
+        <td style="padding:0 5px;"><div style="background:#FEECE3;color:#C23B00;font-family:'Work Sans',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:20px;">High Priority</div></td>
+        <td style="padding:0 5px;"><div style="background:#ffffff;border:1px solid ${BORDER};color:${NAVY_2};font-family:'Work Sans',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.03em;padding:8px 16px;border-radius:20px;">Website Contact Form · ${page}</div></td>
       </tr>
     </table>
 
     <!-- Lead ID bar -->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${NAVY};border-radius:10px;margin-bottom:24px;">
       <tr>
-        <td style="padding:14px 20px;font-family:Arial,sans-serif;font-size:13px;color:#ffffff;">
+        <td style="padding:14px 20px;font-family:'Work Sans',Arial,sans-serif;font-size:13px;color:#ffffff;">
           <strong style="color:${ORANGE};">Lead ID:</strong> ${leadId}
         </td>
-        <td align="right" style="padding:14px 20px;font-family:Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.65);">
+        <td align="right" style="padding:14px 20px;font-family:'Work Sans',Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.65);">
           Submitted: ${submittedAt}
         </td>
       </tr>
@@ -244,7 +247,7 @@ function buildAdminEmailHtml(data, leadId) {
     <!-- Customer Info Card -->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid ${BORDER};border-radius:15px;box-shadow:0 8px 24px -12px rgba(8,17,32,.12);margin-bottom:22px;">
       <tr><td style="padding:28px 28px 6px 28px;">
-        <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:20px;">&#128100; Customer Information</div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:20px;">&#128100; Customer Information</div>
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack">
           <tr>
             ${row('Full Name', fullName)}
@@ -270,24 +273,24 @@ function buildAdminEmailHtml(data, leadId) {
     <!-- Quick Summary -->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,${NAVY},${NAVY_2});border-radius:15px;margin-bottom:28px;">
       <tr><td style="padding:22px 24px;">
-        <div style="font-family:Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:${ORANGE};font-weight:700;margin-bottom:16px;">Quick Summary</div>
+        <div style="font-family:'Work Sans',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:${ORANGE};font-weight:700;margin-bottom:16px;">Quick Summary</div>
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack">
           <tr>
             <td width="25%" style="padding:0 8px 0 0;">
-              <div style="font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Package</div>
-              <div style="font-family:Georgia,'Playfair Display',serif;font-size:15px;color:#ffffff;font-weight:700;">${pkg || '—'}</div>
+              <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Package</div>
+              <div style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#ffffff;font-weight:700;">${pkg || '—'}</div>
             </td>
             <td width="25%" style="padding:0 8px;">
-              <div style="font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Travel Date</div>
-              <div style="font-family:Georgia,'Playfair Display',serif;font-size:15px;color:#ffffff;font-weight:700;">${travelDate || '—'}</div>
+              <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Travel Date</div>
+              <div style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#ffffff;font-weight:700;">${travelDate || '—'}</div>
             </td>
             <td width="25%" style="padding:0 8px;">
-              <div style="font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Passengers</div>
-              <div style="font-family:Georgia,'Playfair Display',serif;font-size:15px;color:#ffffff;font-weight:700;">${adults || '0'} Adult${adults === '1' ? '' : 's'}${children ? ', ' + children + ' Child' + (children === '1' ? '' : 'ren') : ''}</div>
+              <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Passengers</div>
+              <div style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#ffffff;font-weight:700;">${adults || '0'} Adult${adults === '1' ? '' : 's'}${children ? ', ' + children + ' Child' + (children === '1' ? '' : 'ren') : ''}</div>
             </td>
             <td width="25%" style="padding:0 0 0 8px;">
-              <div style="font-family:Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Preferred Contact</div>
-              <div style="font-family:Georgia,'Playfair Display',serif;font-size:15px;color:#ffffff;font-weight:700;">${preferredContact}</div>
+              <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Preferred Contact</div>
+              <div style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#ffffff;font-weight:700;">${preferredContact}</div>
             </td>
           </tr>
         </table>
@@ -310,12 +313,12 @@ function buildAdminEmailHtml(data, leadId) {
 
   <!-- FOOTER -->
   <tr><td class="ttd-pad" style="background:${NAVY};padding:36px 40px;text-align:center;">
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:#ffffff;">TourTripsDubai</div>
-    <div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;">Premium Dubai Travel Company</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:#ffffff;">TourTripsDubai</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;">Premium Dubai Travel Company</div>
 
     <div style="height:1px;background:rgba(255,255,255,.12);margin:22px 0;"></div>
 
-    <div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.75);line-height:2;">
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.75);line-height:2;">
       <a href="${SITE_URL}" style="color:${ORANGE};text-decoration:none;">www.tourtripsdubai.com</a> &nbsp;·&nbsp;
       <a href="mailto:info@tourtripsdubai.com" style="color:rgba(255,255,255,.75);text-decoration:none;">info@tourtripsdubai.com</a> &nbsp;·&nbsp;
       <a href="tel:+971589147828" style="color:rgba(255,255,255,.75);text-decoration:none;">${ADMIN_PHONE_DISPLAY}</a>
@@ -329,7 +332,7 @@ function buildAdminEmailHtml(data, leadId) {
 
     <div style="height:1px;background:rgba(255,255,255,.12);margin:22px 0;"></div>
 
-    <div style="font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">
       © ${new Date().getFullYear()} TourTripsDubai. All rights reserved.<br>
       This email was automatically generated by the TourTripsDubai website.
     </div>
@@ -360,39 +363,12 @@ function buildCustomerEmailHtml(data, leadId) {
   const telHref = phoneDigits ? 'tel:+' + phoneDigits : 'tel:' + ADMIN_PHONE_DISPLAY.replace(/[^\d+]/g, '');
   const waHref = 'https://wa.me/' + ADMIN_PHONE_DISPLAY.replace(/[^\d]/g, '') + '?text=' + encodeURIComponent('Hi TourTripsDubai, my enquiry reference is ' + leadId + '.');
 
-  function skylineColumn(heightPx, isSpire) {
-    const spireCap = isSpire ? `<div style="width:4px;height:18px;background:${ORANGE};margin:0 auto;"></div>` : '';
-    const width = isSpire ? '26%' : '58%';
-    return `<td valign="bottom" style="padding:0;">${spireCap}<div style="height:${heightPx}px;width:${width};margin:0 auto;background:#050B18;border-radius:2px 2px 0 0;"></div></td>`;
-  }
-
-  const skyline = [22, 40, 64, 36, 56, 94, 150, 68, 44, 78, 28]
-    .map(h => skylineColumn(h, h === 150))
-    .join('');
-
   function whyCard(icon, title, desc) {
     return `<td width="50%" valign="top" style="padding:0 10px 20px 0;">` +
       `<div style="background:#ffffff;border:1px solid ${BORDER};border-radius:12px;padding:20px;height:100%;">` +
       `<div style="font-size:26px;margin-bottom:10px;">${icon}</div>` +
-      `<div style="font-family:Georgia,'Playfair Display',serif;font-size:15px;font-weight:700;color:${NAVY};margin-bottom:6px;">${title}</div>` +
-      `<div style="font-family:Arial,sans-serif;font-size:12.5px;color:${INK_SOFT};line-height:1.5;">${desc}</div>` +
-      `</div></td>`;
-  }
-
-  function expCard(icon, title, gradA, gradB) {
-    return `<td width="50%" valign="top" style="padding:0 10px 20px 0;">` +
-      `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-radius:12px;overflow:hidden;border:1px solid ${BORDER};">` +
-      `<tr><td align="center" valign="middle" height="86" style="background:linear-gradient(135deg,${gradA},${gradB});font-size:32px;">${icon}</td></tr>` +
-      `<tr><td style="padding:12px 14px;background:#ffffff;">` +
-      `<div style="font-family:Georgia,'Playfair Display',serif;font-size:14px;font-weight:700;color:${NAVY};">${title}</div>` +
-      `</td></tr></table></td>`;
-  }
-
-  function tipItem(icon, text) {
-    return `<td width="50%" valign="top" style="padding:0 10px 14px 0;">` +
-      `<div style="background:#ffffff;border:1px solid ${BORDER};border-radius:10px;padding:14px 16px;">` +
-      `<span style="font-size:18px;vertical-align:middle;">${icon}</span>` +
-      `<span style="font-family:Arial,sans-serif;font-size:13px;color:${INK};font-weight:600;vertical-align:middle;margin-left:8px;">${text}</span>` +
+      `<div style="font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:700;color:${NAVY};margin-bottom:6px;">${title}</div>` +
+      `<div style="font-family:'Work Sans',Arial,sans-serif;font-size:12.5px;color:${INK_SOFT};line-height:1.5;">${desc}</div>` +
       `</div></td>`;
   }
 
@@ -402,6 +378,9 @@ function buildCustomerEmailHtml(data, leadId) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <title>Thank You — ${SITE_NAME}</title>
 <style>
   @media only screen and (max-width:640px){
@@ -422,32 +401,27 @@ function buildCustomerEmailHtml(data, leadId) {
 
   <!-- HEADER -->
   <tr><td class="ttd-pad" style="background:linear-gradient(135deg,${NAVY},${NAVY_2});padding:40px 40px 30px 40px;text-align:center;">
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:.02em;">
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:.02em;">
       Tour<span style="color:${ORANGE};">Trips</span>Dubai
     </div>
-    <div style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:${ORANGE};font-weight:600;margin-top:6px;">Premium Dubai Experiences</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:${ORANGE};font-weight:600;margin-top:6px;">Premium Dubai Experiences</div>
     <div style="height:1px;background:rgba(255,255,255,.15);margin:26px 0;"></div>
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:27px;line-height:1.3;color:#ffffff;font-weight:700;">Thank You for Contacting TourTripsDubai</div>
-    <div style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.7);margin-top:10px;">Your enquiry has been successfully received.</div>
-  </td></tr>
-
-  <!-- HERO SKYLINE -->
-  <tr><td style="background:linear-gradient(180deg,${NAVY} 0%,${NAVY_2} 45%,${ORANGE} 100%);padding:0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>${skyline}</tr></table>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:27px;line-height:1.3;color:#ffffff;font-weight:700;">Thank You for Contacting TourTripsDubai</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.7);margin-top:10px;">Your enquiry has been successfully received.</div>
   </td></tr>
 
   <!-- BODY -->
   <tr><td class="ttd-pad" style="padding:34px 40px 10px 40px;background:${BG};">
 
     <!-- Greeting -->
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:19px;font-weight:700;color:${NAVY};margin-bottom:12px;">Dear ${fullName},</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:19px;font-weight:700;color:${NAVY};margin-bottom:12px;">Dear ${fullName},</div>
     <p style="font-family:'Work Sans',Arial,sans-serif;font-size:14.5px;color:${INK};line-height:1.7;margin:0 0 10px 0;">Thank you for choosing <strong>TourTripsDubai</strong>. We have successfully received your enquiry.</p>
     <p style="font-family:'Work Sans',Arial,sans-serif;font-size:14.5px;color:${INK};line-height:1.7;margin:0 0 26px 0;">Our Dubai travel expert will contact you shortly through <strong style="color:${ORANGE};">WhatsApp</strong> or <strong style="color:${ORANGE};">Email</strong>.</p>
 
     <!-- Booking Summary Card -->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid ${BORDER};border-radius:15px;box-shadow:0 8px 24px -12px rgba(8,17,32,.12);margin-bottom:28px;">
       <tr><td style="padding:28px 28px 6px 28px;">
-        <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:20px;">&#128203; Booking Summary</div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:20px;">&#128203; Booking Summary</div>
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack">
           <tr>
             ${row('Booking Reference', '<span style="color:' + ORANGE + '">' + leadId + '</span>')}
@@ -467,7 +441,7 @@ function buildCustomerEmailHtml(data, leadId) {
     </table>
 
     <!-- Why Book With Us -->
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:16px;text-align:center;">Why Book With Us</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:${NAVY};margin-bottom:16px;text-align:center;">Why Book With Us</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack" style="margin-bottom:12px;">
       <tr>
         ${whyCard('&#128176;', 'Best Price Guarantee', "Unbeatable rates on Dubai's best experiences, guaranteed.")}
@@ -479,28 +453,11 @@ function buildCustomerEmailHtml(data, leadId) {
       </tr>
     </table>
 
-    <!-- Popular Experiences -->
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin:24px 0 16px 0;text-align:center;">Popular Experiences</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack">
-      <tr>
-        ${expCard('&#127964;', 'Dubai Desert Safari', ORANGE, '#C23B00')}
-        ${expCard('&#128508;', 'Burj Khalifa', NAVY_2, NAVY)}
-      </tr>
-      <tr>
-        ${expCard('&#127961;', 'Dubai City Tour', '#2C7DA0', NAVY_2)}
-        ${expCard('&#128332;', 'Abu Dhabi Tour', '#6B4A9E', '#3A2158')}
-      </tr>
-      <tr>
-        ${expCard('&#128741;', 'Yacht Rental', '#0FA3B1', NAVY_2)}
-        <td width="50%"></td>
-      </tr>
-    </table>
-
     <!-- Need Immediate Help -->
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin:28px 0 16px 0;text-align:center;">Need Immediate Help?</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:${NAVY};margin:28px 0 16px 0;text-align:center;">Need Immediate Help?</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
       <tr><td align="center" style="border-radius:10px;background:#25D366;">
-        <a href="${waHref}" target="_blank" style="display:block;padding:18px;font-family:Arial,sans-serif;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;">&#128172; Chat with Travel Expert</a>
+        <a href="${waHref}" target="_blank" style="display:block;padding:18px;font-family:'Work Sans',Arial,sans-serif;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;">&#128172; Chat with Travel Expert</a>
       </td></tr>
     </table>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-btn" style="margin-bottom:10px;">
@@ -510,29 +467,16 @@ function buildCustomerEmailHtml(data, leadId) {
       </tr>
     </table>
 
-    <!-- Travel Tips -->
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:${NAVY};margin:28px 0 16px 0;text-align:center;">Travel Tips</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="ttd-stack" style="margin-bottom:10px;">
-      <tr>
-        ${tipItem('&#128706;', 'Carry Passport')}
-        ${tipItem('&#128197;', 'Book Activities Early')}
-      </tr>
-      <tr>
-        ${tipItem('&#128095;', 'Wear Comfortable Clothes')}
-        ${tipItem('&#128241;', 'Keep WhatsApp Active')}
-      </tr>
-    </table>
-
   </td></tr>
 
   <!-- FOOTER -->
   <tr><td class="ttd-pad" style="background:${NAVY};padding:36px 40px;text-align:center;">
-    <div style="font-family:Georgia,'Playfair Display',serif;font-size:18px;font-weight:700;color:#ffffff;">TourTripsDubai</div>
-    <div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;">Premium Dubai Travel Company</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:#ffffff;">TourTripsDubai</div>
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;">Premium Dubai Travel Company</div>
 
     <div style="height:1px;background:rgba(255,255,255,.12);margin:22px 0;"></div>
 
-    <div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.75);line-height:2;">
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.75);line-height:2;">
       <a href="${SITE_URL}" style="color:${ORANGE};text-decoration:none;">www.tourtripsdubai.com</a> &nbsp;·&nbsp;
       <a href="mailto:info@tourtripsdubai.com" style="color:rgba(255,255,255,.75);text-decoration:none;">info@tourtripsdubai.com</a><br>
       <a href="tel:+971589147828" style="color:rgba(255,255,255,.75);text-decoration:none;">WhatsApp: ${ADMIN_PHONE_DISPLAY}</a> &nbsp;·&nbsp;
@@ -547,7 +491,7 @@ function buildCustomerEmailHtml(data, leadId) {
 
     <div style="height:1px;background:rgba(255,255,255,.12);margin:22px 0;"></div>
 
-    <div style="font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">
+    <div style="font-family:'Work Sans',Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">
       © ${new Date().getFullYear()} TourTripsDubai. All rights reserved.<br>
       This is an automated confirmation email. Prices and availability are subject to change until final booking confirmation.
     </div>
