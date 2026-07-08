@@ -64,12 +64,13 @@ function findValue(data, keys) {
 
 function appendToSheet(data) {
   const sheet = getSheet();
+  const whatsapp = findValue(data, ['WhatsApp Number']);
   sheet.appendRow([
     new Date(),
     data['Page'] || '',
     findValue(data, ['Full Name', 'Full Name (As Per Passport)']),
     findValue(data, ['Email Address', 'Email']),
-    findValue(data, ['WhatsApp Number']),
+    whatsapp,
     findValue(data, ['Nationality']),
     findValue(data, ['Travel Date']),
     findValue(data, ['Package / Service']),
@@ -77,7 +78,11 @@ function appendToSheet(data) {
     findValue(data, ['Number of Children']),
     findValue(data, ['Special Requests', 'Special Requests / Message', 'Message'])
   ]);
-  return sheet.getLastRow();
+  const lastRow = sheet.getLastRow();
+  // Google Sheets parses cell values starting with "+" as a formula (e.g. "+91 12345" errors out).
+  // Force the WhatsApp column to plain text and re-write it so the number displays correctly.
+  sheet.getRange(lastRow, 5).setNumberFormat('@').setValue(whatsapp);
+  return lastRow;
 }
 
 function formatSummary(data) {
